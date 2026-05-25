@@ -48,6 +48,3 @@ Supplementary materials for *"Inducing AI to Slack Off: Default Narrative Person
 }
 ```
 
-## License
-
-MIT
