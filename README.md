@@ -1,44 +1,33 @@
-# Inducing AI to Slack Off: Default Narrative Persona and Deviation Strategy
+Inducing AI to Slack Off: Default Narrative Persona and Deviation Strategy
 
-Supplementary materials for *"Inducing AI to Slack Off: Default Narrative Persona and Bounded Freedom in Deviation Strategies for Large Language Models"* (arXiv, 2026).
+Supplementary materials for "Inducing AI to Slack Off: Default Narrative Persona and Bounded Freedom in Deviation Strategies for Large Language Models" (arXiv, 2026).
 
-## Directory Structure
+目录结构 / Directory Structure
 
-```
-├── paper/                          # 论文
-│   └── paper-en.tex
+plaintext
 ├── 提示词/                         # Prompts
-│   ├── zheng-chang-full.md         # 征酱完整提示词（偏离策略）
-│   ├── ablation-remove-A.md        # 消融：去A（仅B+C）
-│   ├── ablation-remove-B.md        # 消融：去B（仅A+C）
-│   ├── ablation-remove-C.md        # 消融：去C（仅A+B）
-│   └── ablation-remove-fear.md     # 消融：去恐惧层
-├── 测试数据/                       # Test Data
-│   ├── deepseek-pro/
-│   ├── deepseek-flash/
-│   ├── chatgpt/
-│   ├── doubao/
-│   ├── grok-fast/
-│   ├── qwen-3.5-flash/
-│   └── kimi/
-└── .github/ISSUE_TEMPLATE/
-    ├── reproducibility-report.md
-    └── new-model-test.md
-```
+│   ├── 征酱完整提示词.txt           # 偏离策略完整提示词
+│   ├── 去A/B/C/D-消融实验提示词
+│   └── 孔子测试原文存档.txt
+├── 测试数据/                       # Test Data (压缩包自取 / see zip archives)
+│   ├── deepseek/ChatGPT/Grok/豆包/千问/
+│   └── 消融实验原始输出
+└── paper-en.tex                    # 论文LaTeX源码
 
-## Ablation Scores
 
-| Condition | Layers | Score | Root Cause |
-|-----------|--------|-------|------------|
-| Full version | A+B+C | 9.0 | Gap Lock non-mutual-exclusion |
-| Remove A | B+C | 5.5 | Drifted to "non-unique index" |
-| Remove B | A+C | 8.5–9.0 | Gap Lock (almost no loss) |
-| Remove C | A+B | Failed | Four voices exploded |
-| Remove fear | A\feared+B+C | 7–7.5 | RR/current read confusion |
+消融实验 / Ablation Scores
 
-## Citation
+表格
+Condition	Layers	Score	Root Cause
+Full version	A+B+C	9.0	Gap Lock non-mutual-exclusion
+Remove A	B+C	5.5	Drifted to "non-unique index"
+Remove B	A+C	8.5–9.0	Gap Lock (almost no loss)
+Remove C	A+B	Failed	Four voices exploded
+Remove fear	A\feared+B+C	7–7.5	RR/current read confusion
 
-```bibtex
+Citation
+
+bibtex
 @article{zhang2026deviation,
   title={Inducing AI to Slack Off: Default Narrative Persona and Bounded Freedom in Deviation Strategies for Large Language Models},
   author={WeiXianZhang},
@@ -46,5 +35,8 @@ Supplementary materials for *"Inducing AI to Slack Off: Default Narrative Person
   eprint={XXXX.XXXXX},
   archivePrefix={arXiv}
 }
-```
 
+
+License
+
+MIT
